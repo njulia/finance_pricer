@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>Interest Rate Swap Pricing</title></head>
+<body>
+<h1>Calculate Interest Rate Swap Value</h1>
+<form method="post">{% csrf_token %}{{ form.as_p }}<button type="submit">Calculate</button></form>
+{% if result %}<h2>Swap Value: {{ result }}</h2>{% endif %}
+</body>
+</html>

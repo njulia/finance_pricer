@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>US Bond Future Pricing</title>
+</head>
+<body>
+    <h1>Calculate US Bond Future Price</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Calculate</button>
+    </form>
+
+    {% if result %}
+        <h2>Future Price: {{ result }}</h2>
+    {% endif %}
+</body>
+</html>
