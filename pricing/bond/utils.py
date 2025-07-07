@@ -52,8 +52,8 @@ def calculate_bond_future(
     risk_free_rate: float,
     time_to_delivery: float,
     accrued_interest_start: float = 0,
-    conversion_factor: float = 1,
-    accrued_interest_delivery: float = 0
+    accrued_interest_delivery: float = 0,
+    conversion_factor: float = 1
 ) -> float:
     """
     Calculates the theoretical price of a US Treasury Bond Future using a
@@ -61,11 +61,11 @@ def calculate_bond_future(
 
     Args:
         clean_price: The clean price of the cheapest-to-deliver (CTD) bond.
-        conversion_factor: The conversion factor of the CTD bond.
-        accrued_interest_start: Accrued interest at the start (time 0).
         risk_free_rate: The annualized risk-free interest rate (as a decimal).
         time_to_delivery: Time to delivery of the futures contract in years.
+        accrued_interest_start: Accrued interest at the start (time 0).
         accrued_interest_delivery: Accrued interest at the delivery date.
+        conversion_factor: The conversion factor of the CTD bond.
 
     Returns:
         The theoretical quoted futures price.
